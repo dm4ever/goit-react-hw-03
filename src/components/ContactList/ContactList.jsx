@@ -6,9 +6,9 @@ function ContactList({ contacts }) {
         <div>
             {contacts.map((contact) => (
                 <li key={contact.id}><Contact data={contact} /></li>
-        ))}
+            ))}
         </div>
-    )
- }
+    );
+};
 
 export default ContactList

@@ -1,19 +1,17 @@
-import { Formik } from 'formik'
 import { BsFillTelephoneFill } from "react-icons/bs";
 import { FaUser } from "react-icons/fa6";
-import './Contact.module.css'
-
+import css from './Contact.module.css'
 
 function Contact({ data: { id, name, number } }) {
     return (
-        <div id={id} className={css.card}>
-            <ul>
+        <div className={css.card} id={id}>
+            <ul className={css.cardList}>
                 <li><FaUser /> {name}</li>
-                <li><span><BsFillTelephoneFill /></span> {number}</li>
+                <li><BsFillTelephoneFill /> {number}</li>
             </ul>
-            <button>Delete</button>
+            <button className={css.cardBtn}>Delete</button>
         </div>
-    )
- }
+    );
+};
 
 export default Contact

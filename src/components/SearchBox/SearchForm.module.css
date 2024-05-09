@@ -1,0 +1,10 @@
+.searchBox {
+    width: 332px;
+    margin-bottom: 10px;
+}
+
+.label {
+    margin-bottom: 0;
+    text-align: left;
+    padding-left: 12px;
+}

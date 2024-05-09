@@ -4,7 +4,7 @@ import './App.css'
 import ContactList from './components/ContactList/ContactList';
 import Contact from './components/Contact/Contact';
 import SearchBox from './components/SearchBox/SearchBox';
-// import ContactForm from './components/ContactForm/ContactForm';
+import ContactForm from './components/ContactForm/ContactForm';
 
 function App() {
 
@@ -15,19 +15,28 @@ function App() {
     { id: 'id-4', name: 'Annie Copeland', number: '227-91-26' }
   ];
 
- const [contacts, setContacts] = useState(initialContacts);
+  const [contacts, setContacts] = useState(initialContacts);
+  const [filter, setFilter] = useState("");
 
   const addContact = (newContact) => {
     setContacts([...contacts, newContact]);
   };
 
+  const handleChange = (evt) => {
+    setFilter(evt.target.value);
+  };
+
+  const visibleContacts = contacts.filter((contact) =>
+    contact.name.toLowerCase().includes(filter.toLowerCase())
+  );
+
   return (
     <>
       <div>
         <h1>Phonebook</h1>
-        {/* <ContactForm /> */}
-        {/* <SearchBox /> */}
-        <ContactList contacts={contacts} />
+        <ContactForm />
+        <SearchBox inputValue={filter} handleChange={handleChange} />
+        <ContactList contacts={visibleContacts} />
       </div>
     </>
   )
