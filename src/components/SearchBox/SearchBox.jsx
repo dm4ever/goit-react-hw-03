@@ -7,7 +7,7 @@ function SearchBox({inputValue, handleChange}) {
             <input type="text"
                 value={inputValue}
                 onChange={handleChange}
-                className={css.searchBox}
+                className={css.input}
             />
     </div>
     );

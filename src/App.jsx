@@ -34,7 +34,7 @@ function App() {
     <>
       <div>
         <h1>Phonebook</h1>
-        <ContactForm />
+        <ContactForm addContact={addContact} />
         <SearchBox inputValue={filter} handleChange={handleChange} />
         <ContactList contacts={visibleContacts} />
       </div>

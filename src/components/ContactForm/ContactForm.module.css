@@ -1,0 +1,28 @@
+.form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 400px;
+    border: 2px solid black;
+    padding-left: 10px;
+    margin-bottom: 30px;
+}
+
+.button {
+    display: flex;
+    padding: 5px;
+    width: 120px;
+    margin: 10px auto 10px;
+    justify-content: center;
+}
+
+.field {
+    width: 95%;
+    margin-bottom: 30px;
+}
+
+/* .label {
+    display: flex;
+    align-items: flex-start;
+    text-align:left
+} */
